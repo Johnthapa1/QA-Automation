@@ -21,7 +21,7 @@ def is_valid_email (email):
             return False
 
 # Function to check if a string is a valid phone number
-def is_valid_phone(phone):
+def is_valid_phone (phone):
     return bool(re.match(r'^\d{10}$', phone))
 
 # Open the web page
@@ -42,6 +42,12 @@ while current_y < target_y:
 # Explicitly wait for the first name field to be clickable
 
 first_name_field = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "form_name"))
+)
+
+# Explicitly wait for the last name field to be clickable
+
+last_name_field = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.ID, "form_name"))
 )
 
@@ -80,3 +86,53 @@ message= "Hello this is test 123"
 # Add a sleep to see the form filling action
 
 time.sleep(5)
+
+# check if the first_name is empty
+
+if not first_name:
+    print("Name cannot be empty")
+
+    # clear the field and enter the first name value
+
+first_name_field.clear()
+first_name_field.send_keys(first_name)
+
+time.sleep(0.75)
+
+# Clear the field and enter the last name values
+
+last_name_field.clear()
+last_name_field.send_keys(last_name)
+
+time.sleep(0.75)
+
+# Check if the email address is valid
+
+if is_valid_email(email):
+    print("valid email address")
+
+else:
+    print("Invalid email address")
+
+# Clear the field and enter the email value
+email_field.clear()
+email_field.send_keys(email)
+
+time.sleep(0.75)
+
+# Check if phone number is empty
+
+if not phone:
+    print("Phone number cannot be empty")
+
+    # Clear the field and enter the phone number value
+
+phone_field.clear()
+phone_field.send_keys(phone)
+time.sleep(0.75)
+
+# clear the field and enter the message value
+message_field.clear()
+message_field.send_keys(message)
+
+driver.quit()
