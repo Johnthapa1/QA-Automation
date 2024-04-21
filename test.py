@@ -19,6 +19,11 @@ def is_valid_email (email):
             return True
         else:
             return False
+    except Exception as e:
+        print(e)
+        return False
+
+
 
 # Function to check if a string is a valid phone number
 def is_valid_phone (phone):
