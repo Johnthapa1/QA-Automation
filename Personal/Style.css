@@ -1,0 +1,193 @@
+ body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .navbar-nav .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Section styles */
+        section {
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        section p {
+            margin-bottom: 20px;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Custom CSS for Navbar */
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .navbar-nav .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Section styles */
+        section {
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        section p {
+            margin-bottom: 20px;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Custom CSS for Navbar */
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 10px;
+        }
