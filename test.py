@@ -33,5 +33,50 @@ target_y = 6000
 scroll_distance = 1000
 current_y = 0
 
-# loop to keep scrooling
+# loop to keep scrolling
+while current_y < target_y:
+    driver.execute_script(f"window.scrollBy(0, {scroll_distance});")
+    current_y += scroll_distance
+    time.sleep(0.25)
 
+# Explicitly wait for the first name field to be clickable
+
+first_name_field = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "form_name"))
+)
+
+# Explicitly wait for the email field to be clickable
+
+email_field = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "form_email"))
+)
+time.sleep(5)
+# Explicitly wait for the phone number field to be clickable
+
+phone_field = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "form_phone"))
+)
+# Explicitly wait for the message field to be clickable
+message_field = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "form_message"))
+)
+
+# Example Values
+first_name = ""
+last_name = "test"
+
+# Invalid email for testing
+
+# email = "johndoe"
+# email="johndoe@@gmail.com"
+# email="johndoe@@gmail"
+# email="johndoe@@gmail..com"
+
+# valid email for testing
+email = "test1234@gmail.com"
+phone= "987654345"
+message= "Hello this is test 123"
+
+# Add a sleep to see the form filling action
+
+time.sleep(5)
