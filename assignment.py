@@ -30,7 +30,7 @@ def is_valid_phone (phone):
     return bool(re.match(r'^\d{10}$', phone))
 
 # Open the web page
-driver.get("https://technomax.com.np")
+driver.get("https://mindrisers.com.np/contact-us")
 driver.maximize_window()
 
 # Set the scroll parameters
@@ -44,72 +44,33 @@ while current_y < target_y:
     current_y += scroll_distance
     time.sleep(0.25)
 
-# Explicitly wait for the first name field to be clickable
 
-first_name_field = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "form_name"))
-)
 
-# Explicitly wait for the last name field to be clickable
-
-last_name_field = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "form_lastname"))
-)
 
 # Explicitly wait for the email field to be clickable
 
 email_field = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "form_email"))
+    EC.element_to_be_clickable(driver.find_element(*(By.XPATH,"//input[@placeholder='Email']")))
 )
 # time.sleep(10)
 # Explicitly wait for the phone number field to be clickable
 
 phone_field = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "form_phone"))
-)
-# Explicitly wait for the message field to be clickable
-message_field = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.ID, "form_message"))
+    EC.element_to_be_clickable(driver.find_element(*(By.XPATH,"//input[@placeholder='Phone']")))
 )
 
-# Example Values
-first_name = "john"
-last_name = "test"
 
-# Invalid email for testing
-
-# email = "johndoe"
-# email="johndoe@@gmail.com"
-# email="johndoe@@gmail"
-# email="johndoe@@gmail..com"
 
 # valid email for testing
-email = "test@gmail.com"
+email = "test_123@gmail.com"
 phone= "987654345"
-message= "Hello this is test 123"
+
 
 # Add a sleep to see the form filling action
 
 time.sleep(10)
 
-# check if the first_name is empty
 
-if not first_name:
-    print("Name cannot be empty")
-
-    # clear the field and enter the first name value
-
-first_name_field.clear()
-first_name_field.send_keys(first_name)
-
-time.sleep(1)
-
-# Clear the field and enter the last name values
-
-last_name_field.clear()
-last_name_field.send_keys(last_name)
-
-time.sleep(1)
 
 # Check if the email address is valid
 
@@ -136,8 +97,6 @@ phone_field.clear()
 phone_field.send_keys(phone)
 time.sleep(1)
 
-# clear the field and enter the message value
-message_field.clear()
-message_field.send_keys(message)
+
 
 driver.quit()
